@@ -1,0 +1,31 @@
+
+---caption, strong, details for the table, summary
+--- use label for the form for a blind users, limit, and put the id.
+
+--- using video tag instead of embeded and description
+
+--- separate all the categories into difference html files at least 4 pages the context should be difference
+
+--- keep media related things latest video, my music, and my photos
+
+---- use the icon or just put underline
+
+---- add background image to the footer instead.
+
+--- underline doesnt show up on mobile ---display the button as static/hide the button on the mobile view and changed it as text.
+
+--- bootstrap navbar is easier. 
+
+--- dont really think about the breakpoint
+
+--- add the aside (spesification of my camera)
+
+--- check the photos on the rubic website to fix the youtube problem. (static)
+
+---put the skip button 
+
+---resize the thumbnail into lower resolution
+
+---put the alt/description for the images (blind users)
+
+---remove the running animation for the banner text.

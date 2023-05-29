@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-style" rel="stylesheet" href="css/style.css">
+    <title>Contact - Personal Portofolio Alfarizy</title>
+</head>
+
+<body>
+    <!-- Sidebar Website-->
+    <input type="checkbox" id="check">
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="video.html">Latest Video</a></li>
+            <li><a href="porto.html">My Music</a></li>
+            <li><a href="porto.html">My Photos</a></li>
+            <li><a href="form.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#" class="zoom-link" onclick="toggleZoom()">- Enlarge the view -</a>
+        </nav>
+
+        <nav id="skip">
+            <a href="#content">Jump to the main content</a>
+        </nav>
+
+        <!-- main menu -->
+        <nav id="mainmenu">
+            <h1><a href="index.html">Portofolio | Alfarizy</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="video.html">Latest Video</a></li>
+                <li><a href="porto.html">My Music</a></li>
+                <li><a href="porto.html">My Photos</a></li>
+                <li><a href="form.html">Contact</a></li>
+            </ul>
+            <!-- Menu -->
+            <label for="check" class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i>></label>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- form -->
+        <article id="contact">
+            <div class="container">
+                <div class="left-column">
+                </div>
+                <div class="right-column">
+                    <h2>Send Me Message!</h2>
+                    <form action="mailto:rizy.izy15@gmai.com" method="post" enctype="text/plain">
+
+                        <legend>Personal Information</legend>
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name" size="60" maxlength="100"
+                            placeholder="Enter your first name" required>
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" size="60" maxlength="100"
+                            placeholder="Enter your last name" required><br>
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="email" size="60" maxlength="30"
+                            placeholder="Enter your email address" required><br>
+
+                        <legend>Collaboration Information</legend>
+                        <div class="question">
+                            <label for="collaboration-type">What kind of collaboration related do you plan
+                                to?</label>
+                        </div>
+
+                        <div class="question">
+                            <input type="radio" id="music" name="collaboration-type" value="music">
+                            <label for="music">Music</label>
+                        </div>
+
+                        <div class="question">
+                            <input type="radio" id="videography" name="collaboration-type" value="videography">
+                            <label for="videography">Videography</label><br>
+
+                        </div>
+
+                        <div class="question">
+                            <input type="radio" id="photography" name="collaboration-type" value="photography">
+                            <label for="photography">Photography</label><br>
+
+                        </div>
+
+                        <div class="question">
+                            <input type="radio" id="it-related" name="collaboration-type" value="it-related">
+                            <label for="it-related">IT Related</label><br>
+
+                        </div>
+
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Do you currently live in Budapest, Hungary?
+                        </label>
+
+                        <legend>Message</legend>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+
+                        <div class="button-container">
+                            <button type="reset">Reset</button>
+                            <button type="submit">Send Message</button>
+                        </div>
+                </div>
+                </form>
+            </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="grid">
+            <h3>Let's connect on social media!</h3>
+            <ul class="social-media">
+                <li class="list-social-media"><a href="https://instagram.com/helloimrizy" class="my-link"
+                        target="_blank">Instagram</a></li>
+                <li class="list-social-media"><a
+                        href="https://www.tiktok.com/@helloimrizy?is_from_webapp=1&sender_device=pc" class="my-link"
+                        target="_blank">TikTok</a></li>
+                <li class="list-social-media"><a href="https://youtube.com/imrizy" class="my-link"
+                        target="_blank">YouTube</a></li>
+                <li class="list-social-media"><a href="https://www.linkedin.com/in/helloimrizy/" class="my-link"
+                        target="_blank">LinkedIn</a></li>
+            </ul>
+
+        </div>
+        <div class="grid">
+            <h3>Info</h3>
+            <p>© 2023 Alfarizy, All Rights Reserved</p>
+        </div>
+        <div class="grid">
+            <h3>Send me emails!</h3>
+            <ul class="email-footer">
+                <li class="email-footer">rizy.izy15@gmail.com</li>
+                <li class="email-footer">helloimrizy@gmail.com</li>
+            </ul>
+
+        </div>
+    </footer>
+    <script src=" js/main.js">
+    </script>
+</body>
+
+</html>

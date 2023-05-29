@@ -1,0 +1,838 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+header {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+
+}
+
+/* CSS for the zoomed layout */
+.zoomed-layout {
+    zoom: 2;
+    /* Increase the zoom level as desired */
+}
+
+/* CSS for the zoom link */
+.zoom-link {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    float: right;
+    display: none;
+    padding: 18px;
+}
+
+.mobile-menu:hover {
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, .9);
+    transition: .3s;
+}
+
+.sidebar ul li a {
+    color: black;
+}
+
+.sidebar ul li {
+    padding: 24px;
+}
+
+.sidebar ul li:hover {
+    background-color: #B3B6B7;
+    transition: .3s;
+    transition-property: background-color;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+/* skip button */
+nav#skip a {
+    position: absolute;
+    left: -9999px
+}
+
+/* skip button focus */
+nav#skip a:focus {
+    position: static;
+    background-color: white
+}
+
+/* header */
+header {
+    height: 70px;
+    text-align: center;
+}
+
+/*
+header a:link,
+header a:visited,
+header a:active {
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+*/
+
+header h1 {
+    display: inline-block;
+    float: left;
+    padding: 14px 24px;
+    text-transform: uppercase;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    padding: 21px;
+    display: inline-block;
+}
+
+/* banner-home */
+.banner {
+    background-color: black;
+    padding: 100px 0;
+}
+
+.banner img {
+    width: 200px;
+    border-radius: 150px;
+    margin-bottom: 10px;
+}
+
+.banner h2,
+.banner p,
+.banner span {
+    color: white;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 0.9em;
+}
+
+.banner-text {
+    padding-left: 60px;
+}
+
+/* button github */
+.button-dekstop {
+    color: black;
+    margin-top: 20px;
+    padding-left: 55px;
+}
+
+/*
+.button a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+.button a:hover {
+    text-decoration: underline;
+}
+*/
+
+.button-1,
+.button-2 {
+    appearance: none;
+    background-color: white;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    /*text-decoration: none;*/
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 10%;
+    will-change: transform;
+}
+
+.button-1:disabled,
+.button-2:disabled {
+    pointer-events: none;
+}
+
+.button-1:hover,
+.button-2:hover {
+    transform: translateY(-2px);
+}
+
+.button-1:active,
+.button-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.button-mobile {
+    display: none;
+}
+
+/* about */
+#about h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#about p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+/* Short Brief */
+.shortbrief {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.shortbrief h2 {
+    margin-bottom: 15px;
+}
+
+/* Education, Major, Skills Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #1A1A1A;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #F5F5F5;
+}
+
+tr:nth-child(odd) {
+    background-color: #E8E8E8;
+}
+
+/* Remove borders from last row */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Apply border to all cells */
+td {
+    border: 1px solid #E8E8E8;
+}
+
+/* Remove border for the last cell in each row */
+td:last-child {
+    border-right: none;
+}
+
+/* Remove border for the last row in the table */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Remove border for the first cell in each row */
+td:first-child {
+    border-left: none;
+}
+
+/* thumbnail images */
+.thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    /* Allow images to wrap to the next line */
+    justify-content: flex-start;
+    /* Align images to the left */
+}
+
+#thumbnail {
+    text-align: center;
+}
+
+#thumbnail h2 {
+    margin-bottom: 30px;
+}
+
+.thumbnail a {
+    flex: 0 0 25%;
+    /* Each image takes 25% of the container width */
+    padding: 0;
+    /* Remove any padding around the images */
+    margin: 0;
+    /* Remove any margin around the images */
+}
+
+.thumbnail img {
+    display: block;
+    /* Ensure images are displayed as block elements */
+    width: 100%;
+    /* Make the images take up the entire width of the parent container */
+    height: auto;
+    /* Maintain the image's aspect ratio */
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+
+
+/* latest videos */
+#latestvideo h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#latestvideo p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+}
+
+.video-container {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.video-container iframe,
+.video-container video {
+    border: none;
+    border-radius: 5px;
+    margin-left: 60px;
+    margin-right: 20px;
+}
+
+.video-info {
+    width: 50%;
+    text-align: left;
+}
+
+.video-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-caption {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+/* my music */
+#mymusic h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#mymusic p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bandlab-embed,
+.soundcloud-embed {
+    width: 100%;
+}
+
+.bandlab-embed iframe,
+.soundcloud-embed iframe {
+    width: 100%;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* my photos */
+
+#myphotos h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#myphotos p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.portoimage img {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+aside {
+    text-align: center;
+    /* Center the content horizontally */
+}
+
+details {
+    border: none;
+    /* Remove the default border */
+    padding: 0;
+    /* Remove any padding */
+    margin-bottom: 20px;
+    /* Add some top margin for spacing */
+}
+
+summary {
+    font-weight: bold;
+    /* Apply a bold font weight to the summary */
+    cursor: pointer;
+    /* Change the cursor to indicate interactivity */
+}
+
+details>p {
+    margin: 10px 0;
+    /* Add some vertical margin for spacing */
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    /* Center the grids horizontally */
+    align-items: center;
+    /* Center the grids vertically */
+    font-size: 0.7em;
+}
+
+.grid {
+    margin: 60px;
+    /* Add horizontal spacing between the grids */
+}
+
+h3 {
+    font-size: 1.1em;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Add some spacing below the heading */
+}
+
+.social-media {
+    text-align: left;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.my-link {
+    color: white;
+    /*text-decoration: none;*/
+}
+
+.my-link:hover {
+    color: #E8E8E8;
+    /*text-decoration: underline;*/
+}
+
+.my-link:visited {
+    color: purple;
+}
+
+.list-social-media {
+    margin-bottom: 10px;
+    color: white;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: white;
+}
+
+.email-footer {
+    text-align: left;
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* form */
+
+
+.container {
+    display: flex;
+    max-width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-column {
+    flex: 1;
+    background-image: url(../images/parliament.png);
+    background-size: cover;
+    background-position: 4%;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-column p {
+    color: grey;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+.right-column {
+    flex: 1;
+    padding: 30px;
+}
+
+.right-column h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right-column input[type="text"],
+.right-column input[type="email"],
+.right-column textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    resize: none;
+}
+
+.button-container {
+    display: inline-flex;
+    grid-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-column button[type="submit"],
+.right-column button[type="reset"] {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.right-column button[type="submit"] {
+    background-color: black;
+}
+
+.right-column button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.right-column button[type="reset"] {
+    background-color: #f44336;
+}
+
+.right-column button[type="reset"]:hover {
+    background-color: #d32f2f;
+}
+
+.right-column legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Radio buttons */
+
+
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1A1A1A;
+    border-radius: 50%;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked {
+    border-color: #1A1A1A;
+    background-color: #1A1A1A;
+}
+
+/* Checkboxes */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1A1A1A;
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    border-color: #1A1A1A;
+    background-color: #1A1A1A;
+}
+
+/* Hide the default checkbox tick */
+input[type="checkbox"]::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\2713";
+    font-size: 0.6em;
+    text-align: center;
+    line-height: 12px;
+    color: white;
+}
+
+.question {
+    margin-bottom: 10px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .banner {
+        padding: 60px 0;
+    }
+
+    .banner img {
+        width: 150px;
+    }
+
+    .banner-text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .button-1,
+    .button-2 {
+        display: none;
+    }
+
+    .button-mobile {
+        display: block;
+        /*text-decoration: none;*/
+        font-size: 0.9em;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+
+    .button-mobile ul li a {
+        color: white;
+    }
+
+    #latestvideo h2 {
+        text-align: center;
+        margin-top: 30px;
+        /* Adjust the margin-top value to your preference */
+        margin-bottom: 30px;
+    }
+
+    #latestvideo p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        /* Change the flex-direction to column */
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .video-container iframe,
+    .video-container video {
+        border: none;
+        width: 90%;
+        border-radius: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        /* Remove margin-left and margin-right */
+    }
+
+    .video-info {
+        width: 90%;
+        /* Change the width to 100% */
+        text-align: center;
+        /* Change the text alignment to center */
+        margin-top: 20px;
+    }
+
+    .video-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .video-caption {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        /* Change the flex-direction to column */
+        justify-content: center;
+        background-color: black;
+        align-items: center;
+        font-size: 0.7em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+        color: white;
+        text-align: center;
+        /* Change the text alignment to center */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .social-media {
+        text-align: center;
+        /* Change the text alignment to center */
+        color: white;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer p {
+        font-size: 0.9em;
+        color: white;
+        text-align: center;
+        /* Change the text alignment to center */
+    }
+
+    .grid {
+        margin: 20px;
+    }
+
+    .email-footer {
+        text-align: center;
+    }
+
+    /* form */
+    .left-column {
+        display: none;
+    }
+}
